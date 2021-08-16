@@ -3,12 +3,16 @@ mat-toolbar {
   position: -webkit-sticky;
   top: 0;
   z-index: 1000;
-  height: 7vh;
+  height: 3.75rem;
 
-  .logo {
-    height: 4vh;
-    margin-right: 1em;
-    padding-top: 0.5vh;
+  a {
+    height: 2.75rem;
+    padding: 0.5rem;
+
+    .logo {
+      height: 100%;
+      margin-right: 0.5rem;
+    }
   }
 
   .spacer {
@@ -16,7 +20,7 @@ mat-toolbar {
   }
 
   .toplink {
-    padding: 10px;
+    padding: 0.5rem 1rem;
     font: bold;
     font-size: 11pt;
 
