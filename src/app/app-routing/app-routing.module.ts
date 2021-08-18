@@ -53,40 +53,39 @@ import { ProposalDashboardNewComponent } from "proposals/proposal-dashboard-new/
 
 export const routes: Routes = [
   {
-    path: "",
+    path: "anonymous",
     component: AnonymousLayoutComponent,
     children: [
       {
         path: "",
-        redirectTo: "anonymous/datasets",
+        redirectTo: "datasets",
         pathMatch: "full",
       },
       {
-        path: "anonymous/datasets",
+        path: "datasets",
         component: AnonymousDashboardComponent,
       },
       {
-        path: "anonymous/datasets/:id",
+        path: "datasets/:id",
         component: AnonymousDetailsDashboardComponent,
       },
       {
-        path: "anonymous/about",
+        path: "about",
         component: AboutComponent,
       },
       {
-        path: "anonymous/help",
+        path: "help",
         component: HelpComponent,
       },
     ],
   },
   {
-    path: "",
+    path: "login",
     component: LoginLayoutComponent,
     children: [
-      { path: "", redirectTo: "/login", pathMatch: "full" },
-      { path: "login", component: LoginComponent },
+      { path: "", component: LoginComponent },
       {
-        path: "login/error",
+        path: "error",
         component: ErrorPageComponent,
         data: { errorTitle: "Location Not Found", breadcrumb: "Error" },
       },
@@ -98,7 +97,7 @@ export const routes: Routes = [
     children: [
       {
         path: "",
-        redirectTo: "/datasets",
+        redirectTo: "datasets",
         pathMatch: "full",
       },
       {

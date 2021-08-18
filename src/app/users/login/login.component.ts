@@ -79,7 +79,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.proceedSubscription = this.hasUser$.subscribe(() => {
       console.log(this.returnUrl);
-      this.router.navigateByUrl("/datasets");
+      this.router.navigateByUrl(this.returnUrl);
     });
   }
 
